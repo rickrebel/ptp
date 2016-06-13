@@ -1,0 +1,332 @@
+body {
+  font-family: 'helvetica', sans-serif, arial;
+}
+#landing {
+  color: white;
+  text-align: center;
+}
+.landing__header {
+  position: fixed;
+  right: 0px;
+  top: 0px;
+  height: 70px;
+  background: rgba(0, 0, 0, 0.1);
+  display: block;
+  width: 100%;
+  padding: 20px 30px 0 10px;
+  text-align: right !important;
+  box-sizing: border-box;
+  z-index: 1;
+}
+@media (max-width: 400px) {
+  #header__button-ingresa {
+    display: none;
+  }
+}
+#introduction__explanation {
+  float: left;
+  width: 90%;
+  padding: 80px 0px 30px;
+}
+@media only screen and (max-width: 768px) {
+  #introduction__explanation {
+    background-image: url(http://cdn-yeeko.s3.amazonaws.com/img/landing/big-focus.png);
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+    background-position-y: 120%;
+    padding-bottom: 80%	;
+    padding-top: 60px;
+  }
+}
+#introduction__explanation .font--main {
+  font-size: 14pt;
+}
+#explanation__main {
+  font-size: 23pt;
+  margin-top: .5em;
+  margin-bottom: 1em;
+}
+#introduction__image {
+  background-image: url(http://cdn-yeeko.s3.amazonaws.com/img/landing/big-focus.png);
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+  background-position-y: 25%;
+  float: none;
+}
+@media only screen and (min-width: 1201px) {
+  #introduction__image {
+    background-size: 530px;
+    height: 519px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  #introduction__image {
+    display: none;
+  }
+}
+#banner-politicas {
+  margin-top: 50px;
+  cursor: pointer;
+}
+@media only screen and (max-width: 768px) {
+  #banner-politicas {
+    margin-top: 30px;
+  }
+}
+#landing__construct {
+  padding: 50px 0px;
+}
+#landing__features section {
+  padding: 30px 0px;
+}
+#landing__features section p {
+  margin: 0px;
+  font-size: 16pt;
+}
+#landing__features section b {
+  font-size: 17pt;
+}
+.features__text {
+  height: 110px;
+}
+#landing__steps {
+  padding: 30px;
+}
+#landing__steps b {
+  font-size: 30pt;
+  display: block;
+}
+#landing__steps div p {
+  font-size: 17pt;
+  display: inline-block;
+  margin-left: 5px;
+}
+.steps__step {
+  width: 61%;
+}
+.steps__step p {
+  font-size: 17pt;
+  display: inline-block;
+  margin-left: 5px;
+}
+.steps__title {
+  font-size: 30pt;
+  margin: 0px;
+}
+.step__numbering {
+  display: inline-block;
+  width: 37px;
+  height: 37px;
+  border-radius: 50%;
+}
+.step__dashed {
+  display: inline-block;
+  width: 37px;
+  height: 37px;
+  border-radius: 50%;
+  border: dashed white 3px;
+  padding: 3px;
+}
+.step__number {
+  display: inline-block;
+  width: 37px;
+  height: 37px;
+  border-radius: 50%;
+  background-color: green;
+  line-height: 37px;
+  font-weight: bold;
+  font-size: 20pt;
+}
+/* Entiendo que las siguientes líneas se pueden poner en una función */
+#step-1 {
+  margin-left: 0%;
+}
+#step-2 {
+  margin-left: 13%;
+}
+#step-3 {
+  margin-left: 26%;
+}
+#step-4 {
+  margin-left: 39%;
+}
+#landing__algorithms {
+  padding: 15px 0px;
+}
+#landing__algorithms b {
+  font-size: 25pt;
+  margin-top: 0.7em;
+}
+#landing__algorithms #altorithms__title {
+  font-size: 16pt;
+  margin-top: 0px;
+}
+.algorithms__description {
+  font-size: 20pt;
+}
+#bar-chart__description {
+  margin-top: 60px;
+}
+#bar-chart__block {
+  vertical-align: middle;
+}
+@media only screen and (max-width: 768px) {
+  #bar-chart__block {
+    margin-top: 50px;
+  }
+}
+#landing__examples-discussions {
+  padding: 20px;
+}
+#landing__examples-discussions .font--medium {
+  font-size: 18pt;
+}
+#landing__examples-discussions .example-disussion {
+  width: 80%;
+}
+@media only screen and (max-width: 768px) {
+  #landing__examples-discussions .example-disussion {
+    width: 90%;
+  }
+}
+#landing__examples-discussions .user-picture,
+#landing__examples-discussions .user-name,
+#landing__examples-discussions .post__date,
+#landing__examples-discussions .pagination {
+  display: none;
+}
+.landing__block {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.landing--points {
+  background-image: url("http://cdn-yeeko.s3.amazonaws.com/img/patterns/points.png");
+  background-size: 212px;
+}
+.landing--ballons {
+  background-image: url("http://cdn-yeeko.s3.amazonaws.com/img/patterns/ballons.png");
+  background-size: 224px;
+}
+.landing--numbers {
+  background-image: url("http://cdn-yeeko.s3.amazonaws.com/img/patterns/numbers.png");
+  background-size: 400px;
+}
+.landing--lines {
+  background-image: url("http://cdn-yeeko.s3.amazonaws.com/img/patterns/lines.png");
+}
+.landing--doodle {
+  background-image: url("http://cdn-yeeko.s3.amazonaws.com/img/patterns/doodle.png");
+}
+.example-disussion.table__parent {
+  text-overflow: ellipsis;
+  /* Required for text-overflow to do anything */
+  overflow: hidden;
+}
+.landing__examples-contact {
+  padding: 30px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.landing__examples-contact * {
+  box-sizing: border-box;
+}
+.landing__examples-contact p > a {
+  color: white;
+}
+.landing__examples-contact h2 {
+  font-size: 30px;
+}
+.landing__examples-contact form {
+  padding: 0 30px;
+}
+.landing__examples-contact form div:last-child {
+  padding: 0 30px;
+  text-align: right;
+}
+.landing__examples-contact .form-label {
+  width: 49%;
+  display: inline-block;
+  text-align: left;
+  margin-bottom: 15px;
+  padding: 0 15px;
+}
+.landing__examples-contact .form-label input {
+  padding: 8px 10px;
+  width: 100%;
+  font-size: 20px;
+}
+.landing__examples-contact .form-label label {
+  font-size: 24px;
+  display: block;
+}
+@media only screen and (max-width: 480px) {
+  .landing__examples-contact .form-label label {
+    font-size: 18px;
+  }
+}
+.landing__examples-contact .form-label span {
+  color: #DE006E;
+}
+.landing__examples-contact .form-textarea {
+  width: 99%;
+}
+.landing__examples-contact .form-textarea textarea {
+  font-size: 24px;
+  width: 100%;
+  margin-top: 10px;
+}
+.landing__examples-contact .table__parent {
+  width: 100%;
+  box-sizing: border-box;
+}
+.landing__examples-contact .table__parent .map {
+  width: 100%;
+  height: 350px;
+}
+.landing__examples-contact .table__parent .contact ul {
+  list-style: none;
+  margin-bottom: 60px;
+  padding-left: 0px;
+}
+.landing__examples-contact .table__parent .contact ul li {
+  display: inline-block;
+  margin-bottom: 10px;
+  min-width: 260px;
+  width: 315px;
+}
+.landing__examples-contact .table__parent .contact ul li img {
+  vertical-align: middle;
+  margin: 0 10px;
+  height: 70px;
+}
+.landing__examples-contact .table__parent .contact ul li div {
+  vertical-align: middle;
+  display: inline-block;
+  color: white;
+}
+@media only screen and (max-width: 768px) {
+  .landing__examples-contact .table__parent .contact ul li {
+    text-align: left;
+    width: 34%;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .landing__examples-contact .table__parent .contact ul li {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 15px;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 850px) {
+  .landing__examples-contact .table__parent .contact ul li {
+    width: 34%;
+    text-align: left;
+    padding-left: 50px;
+  }
+}
+#map-container.table__child--2.table__child {
+  width: 100%;
+}

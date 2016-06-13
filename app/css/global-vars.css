@@ -1,0 +1,30 @@
+.unselectable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.font--text {
+  font-family: sans-serif, verdana, arial;
+}
+.font--main {
+  font-family: 'Roboto Slab', serif;
+}
+.font--slim {
+  font-family: 'Advent Pro', sans-serif;
+}
+.font--cursive {
+  font-family: 'Sacramento', cursive;
+}
+.shape__text {
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+.shape--background {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}

@@ -1,0 +1,36 @@
+.color-1 {
+  background-color: #761468;
+}
+.color-2 {
+  background-color: #de006e;
+}
+.color-3 {
+  background-color: #80ba27;
+}
+.color-4 {
+  background-color: #00abc8;
+}
+.color-4--light{
+  background-color: #54BFD3;
+}
+.color-4--dark{
+  background-color: #0692B2;
+}
+.color-5 {
+  background-color: #ef7b0f;
+}
+.color-6 {
+  background-color: #fbbe14;
+}
+.color-7 {
+  background-color: #1e2356;
+}
+.color-8 {
+  background-color: green;
+}
+.color-negative {
+  background-color: red;
+}
+.color-content {
+  background-color: white;
+}

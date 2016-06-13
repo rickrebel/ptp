@@ -1,0 +1,175 @@
+body {
+  margin: 0px auto;
+  max-width: 2000px;
+}
+.clearfix {
+  clear: both;
+}
+/** COMPLETAMENTE PROVISIONALES **/
+/**BORRAR**/
+/** **/
+.noselected {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+/*------------------------------    FOTOS    -----------------------------*/
+.fotosPosts {
+  border-radius: 40px;
+  float: left;
+  background-size: 100%;
+}
+.fotoAperturaHome {
+  width: 45px;
+  height: 45px;
+  margin-left: 20px;
+  margin-top: 10px;
+  border-radius: 40px;
+  float: left;
+  background-size: 100%;
+}
+.fotoAperturaAsunto {
+  width: 60px;
+  height: 60px;
+  margin-left: 20px;
+  margin-top: 20px;
+  border-radius: 40px;
+  float: left;
+  background-size: 100%;
+}
+.fotoPropuestaAsunto {
+  width: 38px;
+  height: 38px;
+  border-radius: 40px;
+  float: left;
+  background-size: 100%;
+}
+.fotoAperturaMenu {
+  width: 38px;
+  height: 38px;
+  border-radius: 40px;
+  float: left;
+  background-size: 100%;
+  margin-left: 10px;
+}
+/*------------------------------    TEXTO CONTENEDOR    -----------------------------*/
+.textoAperturaHome {
+  width: 90%;
+  margin-bottom: 5px;
+  margin-right: 20px;
+  color: black;
+  text-align: left;
+}
+.textoAperturaAsunto {
+  margin-top: 20px;
+  max-width: 530px;
+  margin-left: 100px;
+  margin-right: 90px;
+}
+.textoPropuestaAsunto {
+  margin-left: 53px;
+  max-width: 500px;
+}
+.textoComentarioAsunto {
+  margin-left: 53px;
+  margin-right: 40px;
+  max-width: 500px;
+}
+/*------------------------------        -----------------------------*/
+.autor {
+  color: #696969;
+  display: inline-block;
+}
+.autorAperturaAsunto {
+  color: #696969;
+  display: inline-block;
+  line-height: 15px;
+  height: 15px;
+  font-size: 10pt;
+}
+.autorPropuestaAsunto {
+  color: #696969;
+  display: inline-block;
+  display: block;
+  line-height: 15px;
+  height: 15px;
+  font-size: 10pt;
+}
+.fecha {
+  float: right;
+  color: #D1D3D4;
+}
+.fechaAperturaAsunto {
+  float: right;
+  color: #D1D3D4;
+  font-size: 9pt;
+}
+comment-type {
+  font-weight: bold;
+  color: #761468;
+}
+.previoPropuestaAsunto {
+  font-weight: bold;
+  color: #761468;
+}
+.resumenAperturaAsunto {
+  padding-top: 12px;
+  font-size: 13pt;
+  line-height: 15pt;
+}
+.resumenPropuestaAsunto {
+  padding: 10px 0px;
+  font-size: 12pt;
+  line-height: 14pt;
+}
+.resumenComentarioAsunto {
+  padding-top: 10px;
+  font-size: 11pt;
+  line-height: 13pt;
+}
+.argumentoPropuestaAsunto {
+  padding-top: 10px;
+  font-size: 11pt;
+  line-height: 13pt;
+  border-top: 2px dashed #00abc8;
+  /*
+	-webkit-mask-image: -webkit-gradient(linear, left top, left bottom, 
+		color-stop(0.00,  rgba(0,0,0,1)),
+		color-stop(1.00,  rgba(0,0,0,0)),
+	);*/
+}
+@media (max-width: 449px) {
+  .fotoAperturaAsunto {
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+  }
+  .fotoPropuestaAsunto {
+    width: 33px;
+    height: 33px;
+  }
+  .textoAperturaAsunto {
+    margin-left: 60px;
+    margin-right: 20px;
+  }
+  .textoPropuestaAsunto {
+    margin-left: 45px;
+  }
+  .resumenAperturaAsunto {
+    font-size: 11pt;
+  }
+  .resumenPropuestaAsunto {
+    font-size: 10.5pt;
+    line-height: 13pt;
+  }
+  .argumentoPropuestaAsunto {
+    font-size: 10pt;
+    line-height: 12pt;
+  }
+  .fechaAperturaAsunto {
+    font-size: 8pt;
+  }
+}

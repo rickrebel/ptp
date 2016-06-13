@@ -1,0 +1,228 @@
+<section class="block color-content">
+	HOME  > 
+	<a href="#!/state/{{currentState.slug}}"> {{currentState.text}} </a> > 
+	<a href="#!/region/{{currentRegion.slug}}"> {{currentRegion.text}} </a> > 
+	<a href="#!/project/{{currentProject.slug}}"> {{currentProject.text}} </a> > 
+	<a href="#!/component/{{currentComponent.slug}}"> {{currentComponent.text}}</a> >
+	<a href="#!/record/{{currentRecord.slug}}"> {{currentRecord.text}}</a>
+</section>
+<section class="block color-content">
+
+	<div class="info-text">
+			Localidad:
+		<a href="#!/location/{{currentLocation.slug}}">{{currentLocation.text}} </a>
+	<br>  	
+		Programa: 
+		<a href="#!/program/{{currentProgram.slug}}">{{currentProgram.text}} </a>
+	<br>  	
+		Expediente técnico: 
+		<a href="https://drive.google.com/file/d/0B7YKXUPXGMxZWjd5LWhWRVNfa28/view?usp=sharing"> <img class="1" src="img/drive.png"></img> </a>
+	<br>
+		Tipo de Organización: 
+		{{currentRecord.type_org}}
+	<br>		
+		Capacitación: 
+		<button>Solicitar</button>
+	<br>
+	Organizaciones: No hay actualmente
+	<br>
+
+	</div>
+
+	<div class="table-summary">
+	<table style="width:100%">
+		<tr>
+		<th>Ventanilla</th> 
+		<th>Recursos</th>
+		<th>Operación</th>
+		<th>Solicitado</th>
+		<th>Aprobado</th>
+		<th>Editar</th>
+		</tr>
+
+		<tr>
+			<td>
+				.<img ng-show="currentRecord.status_2" src="img/{{currentRecord.status_2}}.png">
+			</td>
+			<td>
+				.<img ng-show="currentRecord.status_3" src="img/{{currentRecord.status_3}}.png">
+			</td>
+			<td>
+				.<img ng-show="currentRecord.status_4" src="img/{{currentRecord.status_4}}.png">
+			</td>
+			<td>
+				{{currentRecord.cash_2}} {{currentRecord.benef_2}}
+			</td>
+			<td>
+				{{currentRecord.cash_3}} {{currentRecord.benef_3}}
+			</td>			  
+			<td>
+
+	    <md-button class="md-primary md-raised" ng-click="showAdvanced($event)">
+	      Custom Dialog
+	    </md-button>
+
+				<md-menu>
+					<md-button aria-label="Open phone interactions menu" class="md-fab md-primary" ng-click="openMenu($mdOpenMenu, $event)"  ng-disabled="closedRecord">
+						<md-icon md-menu-origin="" class="" style="color: yellow;" md-svg-icon="img/options/ic_mode_edit_white_24px.svg"></md-icon>
+					</md-button>
+					<md-menu-content width="4">
+						<md-menu-item>
+							<md-button disabled="disabled" ng-click="redial($event)">
+								 <span md-menu-align-target="">Cambiar status de {{getStageName()}} a:</span>
+							</md-button>
+						</md-menu-item>
+						<md-menu-item>
+							<md-button ng-click="changeStatus(nextStatus)">
+								<md-icon md-svg-icon="img/options/ic_fast_forward_black_24px.svg"></md-icon>
+								{{getNextStatusName()}}
+							</md-button>
+						</md-menu-item>
+						<md-menu-item>
+							<md-button ng-click="changeStatus('NOAPROVED')">
+								<md-icon md-svg-icon="img/options/ic_close_black_24px.svg"></md-icon>
+								Rechazado
+							</md-button>
+						</md-menu-item>
+						<md-menu-item>
+							<md-button ng-click="changeStatus('DECLINED')">
+								<md-icon md-svg-icon="img/options/ic_priority_high_black_24px.svg"></md-icon>
+								Declinado
+							</md-button>
+						</md-menu-item>
+					</md-menu-content>
+				</md-menu>
+			</td>	
+		</tr>
+
+
+	</table>
+	</div>
+
+	<div class="tags--normal">
+	<img class="yeeko-count__icon inline-box" src="/media/img/icons/tag.png">
+	<a href="tag/" class="shape__text" style="background-color: orange;">
+		Ejemplo
+	</a>  
+	<a href="tag/" class="shape__text" style="background-color: orange;">
+		Ejemplo 2
+	</a>  
+	<a href="tag/" class="shape__text" style="background-color: orange;">
+		Ejemplo 3
+	</a>  
+	</div>
+</section>
+
+
+<section class="block color-4">
+	<table class ="">
+		<tr>
+			<th>Nombre del Beneficiario</th>
+			<th>Cargo</th>
+			<th>Otro(s) proyecto(s)</th>
+		</tr>
+		<tr ng-repeat="benef in currentBenefs">
+			
+			<td >	{{benef.text}}  </td>
+			<td >	{{benef.rol}}  </td>
+			<td >	{{benef.others}}  </td>
+		</tr>
+		<tr>
+			<form name"formBenefs">
+				<td><input ng-model="newB.text" placeholder="Nombre"></input></td>
+				<td>
+					<select ng-model="newB.rol" name="roles" class="yeeko-create__tags">
+						<option value="Presidente"> Presidente </option>
+						<option value="Secretario"> Secretario </option>
+						<option value="Tesorero"> Tesorero </option>
+						<option value="Miembro"> Miembro </option>
+					</select>
+				</td>
+				<td >	<button type="submit" ng-click="newBenef(newB)">Agregar beneficiario</button> </td>
+			</form>
+		</tr>
+	</table>
+
+</section>
+
+<section class="block color-content">
+
+	<div class="new-proposal__container">
+		<div class="user-picture user-picture--medium"></div>
+		<div class="user-name user-name--new user-name--medium" style="display: block">{{currentUser.text}}</div> 
+		<form name="new-comment">
+		<div class="new-proposal__outline new-proposal__outline--summary">
+				<textarea type="text" name="title" class="summary new-proposal__textarea proposal-resume font--text" placeholder="Utiliza este espacio para comentar" ng-model="newComment.text"></textarea>
+		</div>
+		<div class="text-right">
+			<button type="submit" class="proposal-create botonProponer" ng-click="saveComment(newComment,'comment')"> COMENTAR </button>
+		</div>
+		</form>
+	</div>
+</section>
+
+<section class="block color-content" ng-repeat="comment in currentComments">
+
+	<div class="proposal__header data">
+
+	</div>
+	<div class="proposal__container">
+		<a href="/>">
+			<div class="user-picture user-picture--medium"></div>
+			<div class="proposal__post">
+				<div class="user-name user-name--medium">{{getName(comment.author)}}</div> 
+						</a>
+				<div class="timeago post__date post__date--medium">{{comment.date}}</div>
+			</div>
+		<div class="proposal__post">
+			<div class="text--medium proposal__text">{{comment.text}}</div>
+		</div>
+	</div>
+	<div class="main-box-comment comments__container">
+
+		<div class="str-comment-unique comment__container" ng-repeat="response in comment.responses">
+
+				<a href="/">
+					<div class="user-picture user-picture--medium" ></div>
+				</a>
+
+			 <div class="proposal__post">
+				<div class="str-date post__date post__date--medium">
+					<abbr class="timeago">{{response.date}}</abbr>
+				</div>
+					<a href="/<%=slug%>">
+						<div class="user-name user-name--medium">{{getName(response.author)}}</div>
+					</a>
+			</div>
+			<div class="proposal__post">
+				<div class="str-date post__date post__date--medium">
+				</div>
+			</div>
+			<div class="proposal__post">
+				<div class="text--small comment__text">
+					{{response.text}}
+				</div>
+			</div>
+		</div>
+		<div> 
+		<div class="comment-container">
+				<div class="user-picture user-picture--medium"></div>
+				<div class="proposal__post">
+					<div class="user-name user-name--medium">{{currentUser.text}}</div> 
+							</a>
+				</div>
+			<form name="new-resp">
+			<div class="proposal__post new-comment__container" style="height: auto;">
+				<textarea class="nuevoComentarioResumen" placeholder="Puedes contarnos aquí la razón de tu postura" ng-model="newResp.text"></textarea>
+			</div>
+			<div class="text-right">
+				<button type="submit" class="botonComentar btn-create-comment" ng-click="saveComment(newResp,'response', $index)">RESPONDER</button>
+			</div>
+			</form>
+		</div>
+
+		</div>
+	</div>
+</section>
+
+</section>

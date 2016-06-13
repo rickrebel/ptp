@@ -1,0 +1,39 @@
+.table-summary tr, .table-summary td, .table-summary th{
+	border: green solid 1px;
+}
+
+table img{
+	width: 60px;
+}
+
+.table-summary td, .table-summary tr{
+	width: 70px;
+}
+
+.table-description{
+	width: 100%
+}
+
+.table-description th{
+	width: 50%;
+}
+
+.user-name--new{
+	display: block;
+	margin-left: 72px;
+}
+
+.menudemoBasicUsage .md-menu-demo {
+  padding: 24px; }
+
+.menudemoBasicUsage .menu-demo-container {
+  min-height: 200px; }
+
+.md-36{
+    width: 36px;
+    height: 36px;
+}
+
+.message-att input{
+	width: 500px;
+}

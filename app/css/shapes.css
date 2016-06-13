@@ -1,0 +1,26 @@
+.flag--after {
+  float: left;
+  border-style: solid;
+  content: "";
+}
+.shape {
+  position: relative;
+}
+.shape__after {
+  border-style: solid;
+  content: "";
+  position: absolute;
+}
+.shape--left {
+  position: relative;
+  float: left;
+  margin-left: -8px;
+}
+@media only screen and (max-width: 480px) {
+  .shape--left {
+    margin-left: -5px;
+  }
+}
+.shape--extend {
+  display: flex;
+}

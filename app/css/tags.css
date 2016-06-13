@@ -1,0 +1,106 @@
+.tags__profile {
+  margin-bottom: 20px;
+}
+.tags__profile .tag__content {
+  width: 170px;
+  height: 170px;
+  margin-right: 20px;
+}
+.tags__profile .tag__image {
+  height: 102px;
+  margin: 8.5px;
+}
+.tags__profile .tag__name {
+  height: 51px;
+  width: 170px;
+  font-size: 14pt;
+}
+#menu {
+  margin-bottom: 10px;
+}
+#menu .tag__content {
+  width: 130px;
+  height: 130px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+#menu .tag__image {
+  height: 78px;
+  margin: 6.5px;
+}
+#menu .tag__name {
+  height: 39px;
+  width: 130px;
+  font-size: 11pt;
+}
+.tag__content {
+  display: inline-block;
+  wrapAround: true;
+}
+.tag__image {
+  display: block;
+}
+.tag__name {
+  vertical-align: middle;
+  text-align: center;
+  display: table-cell;
+}
+.tag-header__image {
+  margin: 60px 0 60px 0;
+  padding-left: 60px;
+  display: inline-block;
+  width: 40%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 5;
+}
+.tag-header__image > div {
+  /*
+        width: 200px;
+        display: inline-block;
+        */
+  width: 150px;
+  height: 150px;
+  display: inline-block;
+  box-shadow: 1px 1px #BDBDBD;
+}
+.tag-header__image > div img {
+  vertical-align: bottom;
+  height: 200px;
+}
+.tag-header__image > div .field--edit {
+  /*
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 60px;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            */
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 60px;
+  width: 153px;
+  height: 153px;
+  text-align: center;
+  border-radius: 50%;
+  /*.inputfile {
+            	width: 0.1px;
+            	height: 0.1px;
+            	opacity: 0;
+            	overflow: hidden;
+            	position: absolute;
+            	z-index: -1;
+            }*/
+}
+.tag-header__image > div .field--edit label {
+  padding-top: 70px;
+  text-decoration: underline;
+  cursor: pointer;
+  display: block;
+  color: white;
+}

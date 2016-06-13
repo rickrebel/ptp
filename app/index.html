@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js" style="background-color: #1e2356;"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Proyectos productivos online</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/css/select2.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/app2.css">
+  <link rel="stylesheet" href="css/borrarbotones.css">
+  <link rel="stylesheet" href="css/borrarestilos.css">
+  <link rel="stylesheet" href="css/borrarformas.css">
+  <link rel="stylesheet" href="css/borrarforms.css">
+  <link rel="stylesheet" href="css/borrarheader.css">
+  <link rel="stylesheet" href="css/borrarmenu.css">
+  <link rel="stylesheet" href="css/borrarposts.css">
+  <link rel="stylesheet" href="css/buttons.css">
+  <link rel="stylesheet" href="css/color-vars.css">
+  <link rel="stylesheet" href="css/ptp.css">
+  <link rel="stylesheet" href="css/colors.css">
+  <link rel="stylesheet" href="css/devices.css">
+  <link rel="stylesheet" href="css/global-vars.css">
+  <link rel="stylesheet" href="css/globals.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/landing.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/modals.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/posts.css">
+  <link rel="stylesheet" href="css/profile.css">
+  <link rel="stylesheet" href="css/shapes.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/tags.css">
+  <link rel="stylesheet" href="css/yeekodetail.css">
+  <link rel="stylesheet" type="text/css" href="bower_components/angular-tree-control/css/tree-control.css">
+  <link href="bower_components/angular-material/angular-material.css" rel="stylesheet" />
+
+  <link href='http://fonts.googleapis.com/css?family=Advent+Pro' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Sacramento' rel='stylesheet' type='text/css'>
+
+
+  <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body style="background-color: #1e2356;">
+
+  <header class="header color-3">
+    <div id="encabezado">
+    <a href="/contenido"> <img src="img/logo.png" id="logo" alt="logo"/> </a>
+    <div class="perfilMenu table__parent">
+        <img id="imagenPerfilMenu" src="" alt=""/>
+
+        <div class="shape__text header__welcome table__child">
+            <a href="/" class="font--main">
+            </a>
+        </div>
+
+        <div class="table__child profile__options">
+            <img class="profile-options__img" src="img/icons/user-options.png">
+            <ul>
+                <li><a href="">cerrar sesión</a></li>
+                <li><a href="">borrar datos de chaché</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="perfilMenu table__parent">
+    </div>
+
+
+
+
+    </div>
+
+  </header>
+
+
+  <div  id="content" class="font--text">
+    <article ng-view class="yeeko-content">
+      <div ng-hide="loader">Loading...</div>
+    </article>
+    <aside id="menu" class="font--text" ng-controller="MenuCtrl">
+
+        <md-menu>
+          <md-button aria-label="Open phone interactions menu" class="md-fab md-primary" ng-click="openOtionsCreate($mdOpenMenu, $event)" >
+            Hola mundo
+          </md-button>
+          <md-menu-content width="4">
+            <md-menu-item>
+              <md-button ng-click="changeStatus(nextStatus)" href="/#!/component/dotacion-de-activos">
+                <md-icon md-svg-icon="img/options/ic_fast_forward_black_24px.svg"></md-icon>
+                Crear Pregunta
+              </md-button>
+            </md-menu-item>
+            <md-menu-item>
+              <md-button ng-click="changeStatus('NOAPROVED')">
+                <md-icon md-svg-icon="img/options/ic_close_black_24px.svg"></md-icon>
+                Crear Comunicado
+              </md-button>
+            </md-menu-item>
+            <md-menu-item>
+              <md-button ng-click="changeStatus('DECLINED')">
+                <md-icon md-svg-icon="img/options/ic_priority_high_black_24px.svg"></md-icon>
+                Crear Aprendizaje
+              </md-button>
+            </md-menu-item>
+          </md-menu-content>
+        </md-menu>
+
+
+
+      <div class="submenuYeekos">
+        <h3 class="encabezadoSubmenuYeekos">Mis Proyectos</h3>
+        <treecontrol class="tree-classic"
+           tree-model="dataForTheTree"
+           options="treeOptions"
+           on-selection="showSelected(node)"
+           selected-node="node1">
+           <a href="#!/{{node.urlName ? node.urlName : 'component'}}/{{node.slug}}">{{node.text}}</a>
+        </treecontrol>
+      </div>      
+
+      <div class="submenuYeekos">
+        <h3 class="encabezadoSubmenuYeekos">Mis Localidades</h3>
+          <div ng-repeat="location in myLocations" class="">{{location.text}}</div>
+        <br>
+      </div>
+
+
+    </aside>
+  </div>
+
+
+
+  <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+  -->
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/angular-tree-control/angular-tree-control.js"></script>
+
+  <script src="bower_components/angular-animate/angular-animate.js" type="text/javascript" ></script>
+  <script src="bower_components/angular-aria/angular-aria.js" type="text/javascript" ></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-114/svg-assets-cache.js"></script>
+  <script src="bower_components/angular-material/angular-material.js" type="text/javascript" ></script>  
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.6/ngStorage.min.js"></script>
+  <script src="app.js"></script>
+  <script src="component/component.js"></script>
+  <script src="record/record.js"></script>
+  <script src="location/location.js"></script>
+  <script src="services/lists.js"></script>
+  <script src="services/filters.js"></script>
+  <script src="controllers/menu.js"></script>
+  <script src="view2/view2.js"></script>
+  <script src="components/version/version.js"></script>
+  <script src="components/version/version-directive.js"></script>
+  <script src="components/version/interpolate-filter.js"></script>
+
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/js/select2.min.js"></script>
+  <script src="js/select.js"></script>
+
+
+
+
+</body>
+</html>

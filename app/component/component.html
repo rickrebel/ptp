@@ -1,0 +1,205 @@
+<section class="block color-content">
+  HOME  > 
+  <a href="#!/state/{{currentState.slug}}"> {{currentState.text}} </a> > 
+  <a href="#!/region/{{currentRegion.slug}}"> {{currentRegion.text}} </a> > 
+  <a href="#!/project/{{currentProject.slug}}"> {{currentProject.text}} </a> > 
+  <a href="#!/component/{{currentComponent.slug}}"> {{currentComponent.text}}</a>
+</section>
+<section class="block color-content">
+  
+	<form class="filtros">
+		<table>
+			<tr>
+				<th></th>
+				<th style="width: 35%">Programa</th>
+				<th style="width: 35%">Localidades</th>
+				<th ng-hide="currentUser.rol == 'COMUNITARIO'" style="width: 35%">Promotor</th>
+			</tr>
+			<tr>
+				<td class="bold">Filtros</td>
+				<td><select name="programs" class="js-programs yeeko-create__tags"></select></td>
+				<td><select name="locations" class="js-locations yeeko-create__tags"></select></td>
+				<td ng-hide="currentUser.rol == 'COMUNITARIO'"><select name="promotors" class="js-promotors yeeko-create__tags">
+				</select></td>
+			</tr>
+		</table>
+		<button class="button button--action button--compact" type="submit" ng-click="">Aplicar filtros</button>
+
+	</form>
+
+  <div class="info-text">
+	Localidades: <a ng-repeat="location in filterLocations" href="#!/location/{{location.slug}}">{{location.text}}, </a>
+		({{filterLocations.length}} de {{currentLocations.length}})
+	<br>
+	Organizaciones: No hay actualmente
+	<br>
+	Programas: <a ng-repeat="program in currentPrograms" href="#!/program/{{program.slug}}">{{program.text}}, </a>
+  </div>
+
+  <div class="table-summary">
+	<table style="width:100%">
+	  <tr>
+		<th>Diagnóstico</th>
+		<th>Ventanilla</th> 
+		<th>Recursos</th>
+		<th>Operación</th>
+		<th>Solicitado</th>
+		<th>Aprobado</th>
+	  </tr>
+	  <tr>
+		<td>
+		  <img src="img/success.png"> {{currentStatus1}}
+		</td>
+		<td>
+		  <img src="img/success.png"> {{currentStatus2}}
+		</td>
+		<td>
+		  <img src="img/success.png"> {{currentStatus3}}
+		</td>
+		<td>
+		  <img src="img/INPROCESS.png"> {{currentStatus4}}
+		</td>
+		<td>
+		  ${{filterCash2}} <br> {{filterBenef2}}
+		</td>
+		<td>
+		  ${{filterCash3}} <br> {{filterBenef3}}
+		</td>
+	  </tr>
+	</table>
+  </div>
+
+  <div class="tags--normal">
+	<img class="yeeko-count__icon inline-box" src="img/tag.png">
+	<a href="tag/" class="shape__text" style="background-color: orange;">
+		Ejemplo
+	</a>  
+	<a href="tag/" class="shape__text" style="background-color: orange;">
+		Ejemplo 2
+	</a>  
+	<a href="tag/" class="shape__text" style="background-color: orange;">
+		Ejemplo 3
+	</a>  
+  </div>
+</section>
+
+<section class="block color-4--light" style="padding: 0px;">
+  <table class ="table-description">
+	<tr>
+	  <th ng-class="{active:tabs.uno}" ng-click="tab(1)">
+		Resumen
+	  </th>
+	  <th ng-class="{active:tabs.dos}" ng-click="tab(2)">
+		Objetivos
+	  </th>
+	</tr>
+	<tr class="color-4--dark">
+	  <td colspan="2">
+		{{infoDescription}}
+	  </td>
+	</tr>
+  </table>
+</section>
+
+
+
+
+
+
+
+<section class="block color-4">
+
+  <table class =" table-detail">
+	<tr>
+	  <th>
+		Resumen
+	  </th>
+	  <th>
+		Diagnóstico
+	  </th>
+	  <th>
+		Ventanilla
+	  </th>
+	  <th>
+		Recursos
+	  </th>
+	  <th>
+		Operación
+	  </th>
+	  <th>
+		Solicitado
+	  </th>
+	  <th>
+		Aprobado
+	  </th>
+	</tr>
+	<tr>
+	  <td>
+		{{currentComponent.text}}
+	  </td>
+	  <td>
+		<img src="img/success.png"> {{currentStatus1}}
+	  </td>
+	  <td>
+		<img src="img/success.png"> {{currentStatus2}}
+	  </td>
+	  <td>
+		<img src="img/success.png"> {{currentStatus3}}
+	  </td>
+	  <td>
+		<img src="img/INPROCESS.png"> {{currentStatus4}}
+	  </td>
+	  <td>
+		{{currentCash2}} {{currentBenef2}}
+	  </td>
+	  <td>
+		{{currentCash3}} {{currentBenef3}}
+	  </td>
+	</tr>
+	<tr>
+	  <td>
+		{{currentUser.text}}
+	  </td>
+	  <td>
+		<img src="img/success.png"> {{filterStatus1}}
+	  </td>
+	  <td>
+		<img src="img/success.png"> {{filterStatus2}}
+	  </td>
+	  <td>
+		<img src="img/success.png"> {{filterStatus3}}
+	  </td>
+	  <td>
+		<img src="img/INPROCESS.png"> {{filterStatus4}}
+	  </td>
+	  <td>
+		{{filterCash2}} {{filterBenef2}}
+	  </td>
+	  <td>
+		{{filterCash3}} {{currentBenef3}}
+	  </td>
+	</tr>
+
+	<tr ng-repeat="record in filterRecords">
+	  <td colspan="2">
+		<a href="#!/record/{{record.slug}}">{{record.text}}</a>
+	  </td>
+	  <td>
+		.<img ng-show="record.status_2" src="img/{{record.status_2}}.png">
+	  </td>
+	  <td>
+		.<img ng-show="record.status_3" src="img/{{record.status_3}}.png">
+	  </td>
+	  <td>
+		.<img ng-show="record.status_4" src="img/{{record.status_4}}.png">
+	  </td>
+	  <td>
+		{{record.cash_2}} {{record.benef_2}}
+	  </td>
+	  <td>
+		{{record.cash_3}} {{record.benef_3}}
+	  </td>
+	</tr>
+
+  </table>
+</section>

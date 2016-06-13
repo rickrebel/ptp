@@ -1,0 +1,117 @@
+.modal-login-options {
+  width: 80%;
+  max-width: 340px;
+  background: rgba(255, 255, 255, 0.05);
+  text-align: center;
+  position: absolute;
+  top: -270px;
+  left: 0;
+  right: 0;
+  z-index: 4;
+  padding: 0px 0 15px 0;
+  box-sizing: border-box;
+  background: white;
+  margin: 0 auto;
+  border: 1px solid #B1B1B1;
+}
+.modal-login-options .modal-login-options__close {
+  background: black;
+  border-radius: 50px;
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  color: white;
+  line-height: 1.6;
+  font-size: 20px;
+  cursor: pointer;
+  border: 2px solid #F3F3F3;
+}
+.modal-login-options.left-bubble:before {
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 15px 17px 0;
+  border-color: #B1B1B1 transparent;
+  display: block;
+  width: 0;
+  z-index: 0;
+  bottom: -16px;
+  left: 46px;
+}
+.modal-login-options.left-bubble:after {
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 15px 17px 0;
+  border-color: #FFFFFF transparent;
+  display: block;
+  width: 0;
+  z-index: 1;
+  bottom: -15px;
+  left: 46px;
+}
+.modal-login-options.middle-bubble:after {
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 15px 15px 0;
+  border-color: #FFFFFF transparent;
+  display: block;
+  width: 0;
+  z-index: 1;
+  margin-left: -15px;
+  bottom: -15px;
+  left: 51%;
+}
+.modal-login-options.middle-bubble:before {
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 15px 15px 0;
+  border-color: #B1B1B1 transparent;
+  display: block;
+  width: 0;
+  z-index: 0;
+  margin-left: -15px;
+  bottom: -16px;
+  left: 51%;
+}
+.modal-login-options.right-bubble:after {
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 15px 15px 0;
+  border-color: #FFFFFF transparent;
+  display: block;
+  width: 0;
+  z-index: 1;
+  margin-left: -15px;
+  bottom: -15px;
+  left: 88%;
+}
+.modal-login-options.right-bubble:before {
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 15px 15px 0;
+  border-color: #B1B1B1 transparent;
+  display: block;
+  width: 0;
+  z-index: 0;
+  margin-left: -15px;
+  bottom: -16px;
+  left: 88%;
+}
+.modal-login-options h3 {
+  color: #717171;
+}
+.modal-login-options__actions .register-link {
+  color: #de006e;
+  text-decoration: underline;
+  font-size: 12px;
+}
+.modal-login-options-main {
+  height: 100%;
+}

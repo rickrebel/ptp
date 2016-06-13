@@ -1,0 +1,17 @@
+ul.ui-autocomplete {
+  padding-left: 0px;
+  background-color: white;
+  border: 1px solid green;
+  width: 50px;
+}
+ul.ui-autocomplete li {
+  list-style: none;
+  cursor: pointer;
+  padding: 2px 5px;
+}
+ul.ui-autocomplete li.ui-state-focus {
+  background-color: gray;
+}
+.ui-helper-hidden-accessible {
+  display: none;
+}

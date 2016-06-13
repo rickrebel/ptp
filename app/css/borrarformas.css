@@ -1,0 +1,193 @@
+body {
+  margin: 0px auto;
+  max-width: 2000px;
+}
+.clearfix {
+  clear: both;
+}
+/** COMPLETAMENTE PROVISIONALES **/
+/**BORRAR**/
+/** **/
+.noselected {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.bandera {
+  color: white;
+  display: inline-block;
+  font-weight: bold;
+}
+.banderaIzquierda {
+  float: left;
+  margin-left: -8px;
+  color: white;
+  display: inline-block;
+  font-weight: bold;
+}
+.banderaDerecha {
+  float: right;
+  margin-right: -8px;
+  color: white;
+  display: inline-block;
+  font-weight: bold;
+}
+.tituloAperturaHome {
+  color: white;
+  display: inline-block;
+  font-weight: bold;
+  background: #761468;
+  border-radius: 8px 8px 8px 4px;
+  line-height: 20px;
+  position: relative;
+  padding: 5px 15px 5px 25px;
+  margin: 5px 15px 5px 20px;
+  text-decoration: none;
+}
+.tituloAperturaMenu {
+  background-color: white;
+  height: 40px;
+  width: 180px;
+  display: table;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  margin-left: 10px;
+}
+.tituloAperturaMenu:after {
+  float: left;
+  border-style: solid;
+  content: "";
+  margin-top: 11px;
+  margin-left: -186px;
+  border-width: 8px 8px 8px 0px ;
+  border-color: transparent white transparent transparent;
+}
+.textoTituloAperturaMenu {
+  color: #80ba27;
+  font-size: 9pt;
+  vertical-align: middle;
+  text-align: center;
+  display: table-cell;
+  padding: 0px 8px;
+}
+.banderaPropuesta {
+  float: left;
+  margin-left: -8px;
+  color: white;
+  display: inline-block;
+  font-weight: bold;
+  background-color: #00abc8;
+  height: 18px;
+  padding: 5px 0px 5px 2px;
+  width: 160px;
+  margin-top: 20px;
+}
+.banderaPropuesta div {
+  line-height: 16px;
+  font-size: 10pt;
+  border-top: 2px dashed white;
+  padding: 2px 25px;
+  border-bottom: 2px dashed white;
+  display: inline;
+}
+.banderaPuntajes {
+  color: white;
+  display: inline-block;
+  font-weight: bold;
+  width: 40px;
+  height: 30px;
+  background-color: #de006e;
+  margin-right: 47.5%;
+  float: right;
+}
+.banderaPuntajes div {
+  padding: 10px 2px 0px 2px;
+  text-align: center;
+}
+.filtroComentarios {
+  float: right;
+  margin-right: 10px;
+  border-width: 0px;
+  opacity: .7;
+  font-weight: bold;
+  margin-left: 20%;
+}
+.filtroComentarios :select {
+  border-width: 0px;
+}
+.banderaAfter {
+  float: left;
+  border-style: solid;
+  content: "";
+}
+.tituloAperturaHome:before {
+  content: "";
+  padding-top: 12px;
+  padding-left: 15px;
+  border-top-left-radius: 100%;
+  border-style: solid;
+  border-color: #761468 transparent transparent #761468;
+  border-width: 15px 0px 0px 2px;
+  position: absolute;
+  top: 13px;
+  left: 5px;
+  -webkit-transform: rotate(13deg);
+  -moz-transform: rotate(13deg);
+  -o-transform: rotate(13deg);
+  -ms-transform: rotate(13deg);
+  transform: rotate(13deg);
+}
+.tituloAperturaHome:after {
+  content: "";
+  position: absolute;
+  background: #761468;
+  left: 0px;
+  top: 17px;
+  border-radius: 20px 10% 250% 400%;
+  height: 22px;
+  width: 5px;
+}
+.banderaPropuestaAfter {
+  float: left;
+  border-style: solid;
+  content: "";
+  margin-top: 20px;
+  border-width: 14px 14px 14px 3px ;
+  border-color: #00abc8 transparent #00abc8 #00abc8;
+  bottom: 16px;
+  margin-left: -1px;
+}
+.banderaPuntajes:after {
+  float: left;
+  border-style: solid;
+  content: "";
+  border-width: 5px 20px 13px 20px ;
+  border-color: #de006e #de006e transparent #de006e;
+}
+.contadorAsunto:before {
+  float: left;
+  border-style: solid;
+  content: "";
+  margin-top: 5px;
+  margin-left: -16px;
+  border-width: 8px 8px 8px 0px ;
+  border-color: transparent #00abc8 transparent transparent;
+}
+@media (max-width: 449px) {
+  .contadoresAsunto {
+    display: none;
+  }
+  .banderaPuntajes {
+    margin-right: 10px;
+  }
+  .filtroComentarios {
+    display: none;
+  }
+  .banderaPropuesta,
+  .banderaPropuestaAfter {
+    margin-top: 10px;
+  }
+}
