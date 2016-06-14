@@ -37,3 +37,9 @@ table img{
 .message-att input{
 	width: 500px;
 }
+
+.treecontrol li{
+	color: white;
+	text-align: left;
+	font-size: 14pt;
+}

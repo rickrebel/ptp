@@ -113,7 +113,8 @@ angular.module('myApp.component', ['ngRoute'])
 		uno: true,
 		dos: false
 	};
-	$scope.infoDescription = " Esta es la descripción así larga y todo del resumen"
+	$scope.infoDescription = " El presente proyecto a establecer cría y engorda de cerdos denominado productores porcícolas la familia unida integrados por tres hombres y dos mujeres, nace de ellos la idea de inversión por la necesidad de los integrantes de autoemplearse y poder solventar su situación económica que es de escasos recursos. Y de estaforma obtener utilidades para ellos mismos y sus respectivas familias ya que actualmente los integrantes no tienen un empleo fijo y buscan esta oportunidad de invertir en esta actividad económica, para cumplir el derecho que tienen del bienestar social";
+
 
 	$scope.tab = function(num){
 		if (num ==2){
@@ -128,7 +129,7 @@ angular.module('myApp.component', ['ngRoute'])
 				uno: true,
 				dos: false
 			};
-			$scope.infoDescription = " Esta es la descripción así larga y todo del resumen"
+			$scope.infoDescription = " El presente proyecto a establecer cría y engorda de cerdos denominado productores porcícolas la familia unida integrados por tres hombres y dos mujeres, nace de ellos la idea de inversión por la necesidad de los integrantes de autoemplearse y poder solventar su situación económica que es de escasos recursos. Y de estaforma obtener utilidades para ellos mismos y sus respectivas familias ya que actualmente los integrantes no tienen un empleo fijo y buscan esta oportunidad de invertir en esta actividad económica, para cumplir el derecho que tienen del bienestar social";
 		}	
 	}
 

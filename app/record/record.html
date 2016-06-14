@@ -73,9 +73,9 @@
 							</md-button>
 						</md-menu-item>
 						<md-menu-item>
-							<md-button ng-click="changeStatus(nextStatus)">
-								<md-icon md-svg-icon="img/options/ic_fast_forward_black_24px.svg"></md-icon>
-								{{getNextStatusName()}}
+							<md-button ng-click="changeStatus(nextStatus.name)">
+								<md-icon md-svg-icon="img/options/{{nextStatus.image}}.svg"></md-icon>
+								{{nextStatus.text}}
 							</md-button>
 						</md-menu-item>
 						<md-menu-item>

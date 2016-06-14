@@ -63,21 +63,45 @@ angular.module('myApp.record', ['ngRoute'])
 			last_stage = allStatus[i];
 			if ($scope.currentRecord[allStatus[i]] == 'APROVED'){
 				last_stage = allStatus[i+1];
-				$scope.nextStatus = 'INPROCESS';
+				$scope.nextStatus = {
+					'name': 'INPROCESS',
+					'text': 'En proceso',
+					'image' : 'ic_fast_forward_black_24px'
+				};
 			}
 			else if ($scope.currentRecord[allStatus[i]]){
 				if ($scope.currentRecord[allStatus[i]] == 'INPROCESS')
-					$scope.nextStatus = 'APROVED';
+					$scope.nextStatus = {
+					'name': 'APROVED',
+					'text': 'Aprobado',
+					'image' : 'ic_check_black_24px'
+				};
 				break;
 			}
 			else{
 				$scope.currentRecord[allStatus[i]] = 'PENDING';
-				$scope.nextStatus = 'INPROCESS';
+				$scope.nextStatus = {
+					'name': 'INPROCESS',
+					'text': 'En proceso',
+					'image' : 'ic_fast_forward_black_24px'
+				};
 				break;	
 			}
 		};
 		getClosedRecord();
 	};	
+
+	var allMessages= [];
+
+	$scope.closedRecord = "";
+
+	function getClosedRecord(){
+		var statusLastStage = $scope.currentRecord[last_stage];
+		if (statusLastStage && !(statusLastStage == 'INPROCESS' || statusLastStage == 'PENDING')){
+			$scope.closedRecord = true;
+		}
+		$scope.loader = true ;
+	}
 
 	$scope.getStageName= function(){
 		switch(last_stage){
@@ -92,18 +116,6 @@ angular.module('myApp.record', ['ngRoute'])
 				break;
 		}
 	}
-
-	var allMessages= [];
-
-	$scope.closedRecord = "";
-
-	function getClosedRecord(){
-		var statusLastStage = $scope.currentRecord[last_stage];
-		if (statusLastStage && !(statusLastStage == 'INPROCESS' || statusLastStage == 'PENDING')){
-			$scope.closedRecord = true;
-		}
-		$scope.loader = true ;
-	}	
 
 	$scope.changeStatus = function(newStatus){
 		$scope.previousStatus = $scope.currentRecord[last_stage]

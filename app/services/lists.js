@@ -29,11 +29,11 @@ angular.module('myApp.lists', ['ngRoute'])
 		{"id":4,"text":"Otro","slug":"otro","state":2},
 		{"id":5,"text":"Otro2","slug":"otro2","state":2}]
 
-	this.allProjects=[{"id":1,"text":"Ganado Porcino para venta en Tlaxcala, Puebla y Xalapa","slug":"porcino","region":1},
-		{"id":2,"text":"Viveros para la producción de frutales","slug":"viveros","region":1},
-		{"id":3,"text":"Ganado Bovino de doble propósito","slug":"bovino","region":1},
-		{"id":4,"text":"Otro","slug":"otro","region":2},
-		{"id":5,"text":"Otro2","slug":"otro2","region":2}]
+	this.allProjects=[{"id":1,"text":"Ganado Porcino para venta en Tlaxcala, Puebla y Xalapa","slug":"porcino","region":1,"tags":['ganado porcino','ganadería','producción de alimentos']},
+		{"id":2,"text":"Viveros para la producción de frutales","slug":"viveros","region":1,"tags":[]},
+		{"id":3,"text":"Ganado Bovino de doble propósito","slug":"bovino","region":1,"tags":[]},
+		{"id":4,"text":"Otro","slug":"otro","region":2,"tags":[]},
+		{"id":5,"text":"Otro2","slug":"otro2","region":2,"tags":[]}]
 
 	this.allComponents=[{"id":1,"text":"Dotación de Activos","slug":"dotacion-de-activos","project":1},
 		{"id":2,"text":"Producción de alimentos","slug":"produccion-de-alimentos","project":1},
