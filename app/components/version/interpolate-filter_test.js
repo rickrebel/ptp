@@ -8,6 +8,9 @@ describe('myApp.version module', function() {
       $provide.value('version', 'TEST_VER');
     }));
 
+
+    //HOLA COMMIT
+
     it('should replace VERSION', inject(function(interpolateFilter) {
       expect(interpolateFilter('before %VERSION% after')).toEqual('before TEST_VER after');
     }));
